@@ -5,5 +5,8 @@
         "psr-4": {
             "BasicApp\\CodeMirrorJs\\": ""
         }
+    },
+    "require": {
+        "bower-asset/codemirror": "*"
     }
 }
