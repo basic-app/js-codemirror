@@ -12,7 +12,7 @@ SystemEvents::onUpdate(function()
         return;
     }
 
-    $source = dirname(COMPOSER_PATH) . '/bower-asset/codemirror';
+    $source = dirname(COMPOSER_PATH) . '/npm-asset/codemirror';
 
     $dirs = ['addon', 'keymap', 'lib', 'mode', 'theme'];
 

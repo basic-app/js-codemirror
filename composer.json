@@ -7,6 +7,6 @@
         }
     },
     "require": {
-        "bower-asset/codemirror": "*"
+        "npm-asset/codemirror": "*"
     }
 }
