@@ -21,6 +21,6 @@ SystemEvents::onUpdate(function()
         CliHelper::copy($source . '/' . $dir, $target . '/' . $dir);
     }
 
-    CliHelper::copy(dirname(__DIR__) . '/Js/init.js', $target . '/init.js');
+    CliHelper::copy(dirname(__DIR__) . '/init.js', $target . '/init.js');
 
 });
