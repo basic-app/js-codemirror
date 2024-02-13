@@ -16,18 +16,9 @@ class Publisher extends BasePublisher
 
     public $url = 'https://github.com/codemirror/codemirror5/archive/refs/tags/5.65.16.zip';
 
-    public $allowedTypes = [
-        //'md',
-        //'txt'
-    ];
-
-    public $allowedFiles = [
-        //'tinymce.d.ts'
-    ];
-
     public function publish(): bool
     {
-        if (is_dir($this->destination . DIRECTORY_SEPARATOR . 'lib'))
+        if ($this->destinationExists)
         {
             return true;
         }
