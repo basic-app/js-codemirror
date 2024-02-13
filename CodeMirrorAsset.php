@@ -1,11 +1,18 @@
 <?php
 /**
- * @author Basic App Dev Team <dev@basic-app.com>
+ * @author Basic App Dev Team
  * @license MIT
- * @link http://basic-app.com
  */
 namespace BasicApp\Js\CodeMirror;
 
-class CodeMirrorAsset extends BaseCodeMirrorAsset
+class CodeMirrorAsset extends \BasicApp\Core\Asset
 {
+
+    public static function register(&$head, &$beginBody = '', &$endBody = '')
+    {
+        $head .= app_view('BasicApp\Js\CodeMirror\Views\head');
+                
+        $endBody .= app_view('BasicApp\Js\CodeMirror\Views\end-body');
+    }
+
 }

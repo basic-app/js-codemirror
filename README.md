@@ -1,1 +1,1 @@
-# plugin-codemirror
+# CodeMirror 5

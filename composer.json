@@ -3,10 +3,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "BasicApp\\Js\\CodeMirror\\": ""
+            "BasicApp\\Js\\CodeMirror\\": "src"
         }
-    },
-    "require": {
-        "npm-asset/codemirror": "*"
     }
 }
