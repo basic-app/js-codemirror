@@ -14,7 +14,7 @@ class Publisher extends BasePublisher
 
     public $createDestination = true;
 
-    public $url = 'https://github.com/codemirror/codemirror5/archive/refs/tags/5.65.16.zip';
+    public $url = 'https://codemirror.net/codemirror.zip';
 
     public function publish(): bool
     {
@@ -24,8 +24,8 @@ class Publisher extends BasePublisher
         }
 
         return $this->downloadFile($this->url)
-            ->extractZipArchive($this->getScratch() . '5.65.16.zip')
-            ->setSource($this->getScratch() . 'codemirror5-5.65.16')
+            ->extractZipArchive($this->getScratch() . 'codemirror.zip')
+            ->setSource($this->getScratch() . 'codemirror-5.65.16')
             ->addPath('addon')
             ->addPath('keymap')
             ->addPath('lib')
