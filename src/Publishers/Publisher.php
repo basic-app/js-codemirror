@@ -23,15 +23,25 @@ class Publisher extends BasePublisher
             return true;
         }
 
-        return $this->downloadFile($this->url)
-            ->extractZipArchive($this->getScratch() . 'codemirror.zip')
-            ->setSource($this->getScratch() . 'codemirror-5.65.16')
-            ->addPath('addon')
-            ->addPath('keymap')
-            ->addPath('lib')
-            ->addPath('mode')
-            ->addPath('theme')
-            ->merge(false);
+        $this->downloadFile($this->url);
+        
+        $this->extractZipArchive($this->getScratch() . 'codemirror.zip');
+
+        foreach(directory_map($this->getScratch(), 2) as $key => $value)
+        {
+            if (is_array($value))
+            {
+                return $this->setSource($this->getScratch() . $key)
+                    ->addPath('addon')
+                    ->addPath('keymap')
+                    ->addPath('lib')
+                    ->addPath('mode')
+                    ->addPath('theme')
+                    ->merge(false);
+            }
+        }
+
+        return true;
     }
 
 }
