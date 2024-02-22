@@ -18,7 +18,7 @@ class Publisher extends BasePublisher
 
     public function publish(): bool
     {
-        if ($this->destinationExists)
+        if (count(directory_map($this->destination)) > 0)
         {
             return true;
         }
